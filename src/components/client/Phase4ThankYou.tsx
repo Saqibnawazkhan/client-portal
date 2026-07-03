@@ -11,7 +11,7 @@ const FAVORS = [
 
 export function Phase4ThankYou() {
   const { dispatch, activeClient } = usePortal();
-  const firstName = activeClient.contact.split(' ')[0];
+  const firstName = activeClient.contact.split(' ')[0] || 'there';
 
   return (
     <div>

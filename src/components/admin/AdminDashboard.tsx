@@ -3,7 +3,7 @@ import { ArrowUp, Check, ChevronRight, Users } from 'lucide-react';
 import { usePortal } from '../../store/PortalContext';
 import { currentPhaseOf } from '../../store/portalReducer';
 import { phaseMeta, statusInfo } from '../../data/phases';
-import { initials } from '../../data/seed';
+import { initials } from '../../lib/format';
 import { StatusBadge } from '../ui/Badge';
 import './Admin.css';
 

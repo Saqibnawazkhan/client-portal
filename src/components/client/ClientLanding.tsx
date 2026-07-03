@@ -14,7 +14,9 @@ export function ClientLanding() {
   const curStatus = ac.phases[cur].status;
   const info = statusInfo(curStatus, cur);
   const meta = phaseMeta(cur);
-  const firstName = ac.contact.split(' ')[0];
+  const firstName = ac.contact.split(' ')[0] || 'there';
+  const brand =
+    ac.company && ac.company !== 'New client' && !ac.company.includes('@') ? ac.company : 'your brand';
 
   const isOpen = curStatus === 'open';
   const isSubmitted = curStatus === 'submitted';
@@ -64,7 +66,7 @@ export function ClientLanding() {
               Welcome, {firstName} <span className="wave">👋</span>
             </h1>
             <p className="hero-sub">
-              We're excited to build with <strong>{ac.company}</strong>. Complete each phase below — your Orbit
+              We're excited to build with <strong>{brand}</strong>. Complete each phase below — your Orbit
               team opens the next one as soon as we've reviewed your work.
             </p>
             <div className="hero-tagline">Engineered for the Future. Built for Today.</div>

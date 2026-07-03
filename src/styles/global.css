@@ -264,6 +264,9 @@ button { font-family: inherit; }
 .view-anim { animation: viewIn 0.4s var(--ease) both; }
 .slide-down { animation: slideDown 0.35s var(--ease) both; }
 
+@keyframes orbitSpin { to { transform: rotate(360deg); } }
+.orbit-spin { display: inline-flex; animation: orbitSpin 1.1s linear infinite; }
+
 /* staggered list rows */
 .stagger > * { animation: rowIn 0.36s var(--ease) both; }
 .stagger > *:nth-child(1) { animation-delay: 0.02s; }
