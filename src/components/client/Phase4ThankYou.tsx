@@ -32,13 +32,13 @@ export function Phase4ThankYou() {
         </div>
         <div className="contact-lines">
           <div>
-            <Mail size={16} /> hello@orbit.studio
+            <Mail size={16} /> info@orbitpk.com
           </div>
           <div>
-            <MessageCircle size={16} /> WhatsApp: +92 300 1122334
+            <MessageCircle size={16} /> WhatsApp: 0327 5362412
           </div>
           <div>
-            <Globe size={16} /> orbit.studio
+            <Globe size={16} /> orbitpk.com
           </div>
         </div>
         <div className="contact-tagline">Engineered for the Future. Built for Today.</div>

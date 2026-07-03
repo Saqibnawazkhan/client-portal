@@ -97,7 +97,7 @@ export function Phase3Contract() {
               <br />
               Lahore, Pakistan
               <br />
-              hello@orbit.studio
+              info@orbitpk.com
             </div>
           </div>
           <div>
@@ -141,7 +141,7 @@ export function Phase3Contract() {
                 <strong>IBAN:</strong> PK00 ORBT 0000 0000 1234
               </div>
               <div>
-                <strong>Wise / Payoneer:</strong> hello@orbit.studio
+                <strong>Wise / Payoneer:</strong> info@orbitpk.com
               </div>
               <div>
                 <strong>PayPal:</strong> paypal.me/orbitstudio

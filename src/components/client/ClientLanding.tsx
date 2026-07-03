@@ -152,7 +152,7 @@ export function ClientLanding() {
               <MessageCircle size={18} />
             </span>
             <span>
-              Questions at any stage? Email <a href="mailto:hello@orbit.studio">hello@orbit.studio</a> — we
+              Questions at any stage? Email <a href="mailto:info@orbitpk.com">info@orbitpk.com</a> — we
               usually reply within a few hours.
             </span>
             <span className="support-badge hide-sm">

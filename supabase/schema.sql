@@ -287,7 +287,8 @@ alter publication supabase_realtime add table public.notifications;
 -- already signed in before being added to the allowlist.
 -- =====================================================================
 insert into public.admin_allowlist (email) values
-  ('hello.theorbit@gmail.com')
+  ('hello.theorbit@gmail.com'),
+  ('info@orbitpk.com')
   -- , ('teammate@example.com')
 on conflict (email) do nothing;
 
