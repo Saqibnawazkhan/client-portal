@@ -1,0 +1,37 @@
+.thankyou-hero {
+  padding: 40px 36px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+.thankyou-title { margin: 10px 0 8px; font-size: 28px; font-weight: 800; letter-spacing: -0.025em; }
+.thankyou-sub {
+  margin: 0 auto;
+  max-width: 580px;
+  font-size: 15.5px;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+
+.contact-card {
+  background: linear-gradient(135deg, #16181D, #26282f);
+  color: #fff;
+  border-radius: var(--r-lg);
+  padding: 26px 28px;
+}
+.thankyou-contact { margin-top: 20px; }
+.contact-lines { font-size: 14px; color: #D1D5DB; display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.contact-lines div { display: flex; align-items: center; gap: 10px; }
+.contact-lines svg { color: var(--brand-400); flex: none; }
+.contact-tagline { margin-top: 14px; font-size: 12.5px; color: #9CA3AF; font-style: italic; }
+
+/* slim favor strip */
+.favor-strip {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.favor-strip-title { font-size: 18px; font-weight: 800; margin-top: 2px; }
+.favor-links { display: flex; gap: 10px; flex-wrap: wrap; }
