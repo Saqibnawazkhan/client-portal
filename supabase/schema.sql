@@ -275,11 +275,20 @@ begin
 end;
 $$;
 
--- ---------- Realtime ----------
-alter publication supabase_realtime add table public.clients;
-alter publication supabase_realtime add table public.phases;
-alter publication supabase_realtime add table public.activity;
-alter publication supabase_realtime add table public.notifications;
+-- ---------- Realtime (idempotent: only add tables not already published) ----------
+do $$
+declare
+  t text;
+begin
+  foreach t in array array['clients', 'phases', 'activity', 'notifications'] loop
+    if not exists (
+      select 1 from pg_publication_tables
+      where pubname = 'supabase_realtime' and schemaname = 'public' and tablename = t
+    ) then
+      execute format('alter publication supabase_realtime add table public.%I', t);
+    end if;
+  end loop;
+end $$;
 
 -- =====================================================================
 -- FINAL STEP — make yourself (and your team) an admin.
