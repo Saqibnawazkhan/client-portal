@@ -1,3 +1,30 @@
+/* ---------- Invite a client ---------- */
+.invite-card {
+  width: min(480px, 100%);
+  animation: viewIn 0.28s var(--ease) both;
+}
+.invite-ico {
+  width: 30px; height: 30px; border-radius: 9px; flex: none;
+  background: var(--brand-100); color: var(--brand-600);
+  display: flex; align-items: center; justify-content: center;
+}
+.invite-form { display: flex; gap: 10px; flex-wrap: wrap; }
+.invite-form .input { flex: 1; min-width: 180px; }
+.invite-error {
+  margin-top: 12px; font-size: 13px; color: #B91C1C;
+  background: #FEF2F2; border: 1px solid #FECACA; border-radius: var(--r-sm); padding: 10px 12px;
+}
+.invite-result {
+  margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line);
+}
+.invite-result-label {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 13px; color: var(--approved); font-weight: 600; margin-bottom: 10px;
+}
+.invite-result-label strong { color: var(--ink); }
+.invite-link-row { display: flex; gap: 8px; }
+.invite-link-input { font-size: 12.5px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--ink-2); }
+
 /* ---------- Stats ---------- */
 .stat-grid {
   display: grid;

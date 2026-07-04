@@ -5,6 +5,7 @@ import { currentPhaseOf } from '../../store/portalReducer';
 import { phaseMeta, statusInfo } from '../../data/phases';
 import { initials } from '../../lib/format';
 import { StatusBadge } from '../ui/Badge';
+import { InviteClient } from './InviteClient';
 import './Admin.css';
 
 export function AdminDashboard() {
@@ -32,13 +33,14 @@ export function AdminDashboard() {
 
   return (
     <div>
-      <div className="row between wrap" style={{ gap: 16, alignItems: 'flex-end', marginBottom: 22 }}>
+      <div className="row between wrap" style={{ gap: 16, alignItems: 'flex-end', marginBottom: 18 }}>
         <div>
           <h1 style={{ fontSize: 29, fontWeight: 800, letterSpacing: '-0.025em' }}>Client Pipeline</h1>
           <p className="muted" style={{ fontSize: 14, marginTop: 6 }}>
             Review submissions and open the next phase for each client.
           </p>
         </div>
+        <InviteClient />
       </div>
 
       {/* Stats */}

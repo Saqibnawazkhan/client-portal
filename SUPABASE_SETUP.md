@@ -46,6 +46,25 @@ You do these one-time steps; everything else is already built.
 
 ---
 
+## Invite links (admin adds clients without the email step)
+
+On the admin dashboard there's an **"Invite a client"** button: enter a client's email, click
+**Generate link**, and copy a private one-time sign-in link to send them (WhatsApp, email, etc.).
+They click it and their portal opens — no password, no waiting for an email.
+
+This runs through the `/api/create-invite` serverless function (it needs your secret key, which can't
+live in the browser). To enable it:
+
+1. In **Vercel → your project → Settings → Environment Variables**, add one more variable:
+   - **Name:** `SUPABASE_SERVICE_ROLE_KEY`  (⚠️ no `VITE_` prefix — this must stay server-only)
+   - **Value:** Supabase → Project Settings → API → **`service_role`** key
+2. **Redeploy.**
+3. Make sure your Vercel URL is in Supabase → Authentication → **Redirect URLs** (so the invite link
+   can return to your site).
+
+> Invite links are generated on the deployed site. In local `npm run dev` the button will say
+> "works on your live site" (serverless functions don't run in the plain Vite dev server).
+
 ### How the security works
 - Every write goes through server-side functions (`submit_phase`, `approve_phase`,
   `toggle_lock`) that enforce the rules — a client **cannot** approve their own phase,
